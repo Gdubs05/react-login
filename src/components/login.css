@@ -1,0 +1,19 @@
+.button{
+    width: 100px;
+    max-width: 200px;
+    border-radius: 10px;
+}
+
+.input{
+    height: 25px;
+    max-width: 200px;;
+    margin-bottom: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    color: #000000;
+}
+
+.login-container{
+    display: flex;
+    flex-direction: column;
+}
