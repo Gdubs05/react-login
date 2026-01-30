@@ -1,4 +1,4 @@
-import "./login.css";
+import "./Login.css";
 import "../App.css";
 import { useState } from "react";
 
@@ -21,9 +21,9 @@ export function Login() {
       usernameInputText == "Gdubs05" &&
       passwordInputText == "iLoveTurtles23"
     ) {
-      console.log("Access granted");
+      alert("Access Granted.");
     } else {
-      console.log("Acess denied: Your username and/or password are wrong");
+      alert("Access Denied: Your Username and/or Password are incorrect.");
     }
   }
 
@@ -38,7 +38,7 @@ export function Login() {
       <input
         onChange={savePasswordInputText}
         className="input"
-        type="text"
+        type="password"
         placeholder="Password"
       ></input>
       <button onClick={login}>Login</button>
