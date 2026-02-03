@@ -12,8 +12,8 @@ export function Header() {
       </div>
 
       <div className="right-section">
-        <Link className="orders-link header-link" to="/orders">
-          <span className="orders-text">Orders</span>
+        <Link className="orders-link header-link" to="/login">
+          <span className="orders-text">Login</span>
         </Link>
 
         <Link className="cart-link header-link" to="/checkout">

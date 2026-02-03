@@ -30,7 +30,7 @@ export function Login() {
       passwordInputText == "iLoveTurtles23"
     ) {
       alert("Access Granted.");
-      navigate("/home");
+      navigate("/");
     } else {
       alert("Access Denied: Your Username and/or Password are incorrect.");
     }
