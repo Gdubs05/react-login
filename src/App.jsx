@@ -1,6 +1,7 @@
 import "./App.css";
 import { HomePage } from "./pages/HomePage";
 import { LoginPage } from "./pages/LoginPage";
+import { TdeePage } from "./pages/TdeePage";
 import { Routes, Route, Router } from "react-router-dom";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <Routes>
       <Route index element={<HomePage />} />
       <Route path="login" element={<LoginPage />} />
+      <Route path="tdee" element={<TdeePage />} />
     </Routes>
   );
 }
