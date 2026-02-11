@@ -16,9 +16,9 @@ export function Header() {
           <span className="orders-text">Login</span>
         </Link>
 
-        <Link className="cart-link header-link" to="/checkout">
+        <Link className="cart-link header-link" to="/tdee">
           <img className="cart-icon" src="images/icons/cart-icon.png" />
-          <div className="cart-text">Cart</div>
+          <div className="cart-text">TDEE</div>
         </Link>
       </div>
     </div>
