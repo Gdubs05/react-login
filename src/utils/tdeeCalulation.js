@@ -7,17 +7,17 @@ export function tdeeCalculation(inputValues){
         genderVariable = -161;
     }
 
-    const bmrCalories = ( 
+    const bmrCalories = Math.round(( 
         (10 * (parseInt(inputValues.weight)/2.205)) 
         + (6.25 * (inputValues.height * 2.54)) 
         - (inputValues.age * 5) 
         + genderVariable
-    )
+    ));
 
-    const tdeeCalories = (bmrCalories * parseFloat(inputValues.activity));
+    const tdeeCalories = Math.round((bmrCalories * parseFloat(inputValues.activity)));
     
     console.log(bmrCalories);
     console.log(tdeeCalories);
 
-    return (tdeeCalories);
+    return {tdeeCalories: tdeeCalories, bmrCalories: bmrCalories};
 }

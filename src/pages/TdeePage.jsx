@@ -11,7 +11,10 @@ export function TdeePage() {
     activity: "",
   });
 
-  const [tdeeCalories, setTdeeCalories] = useState();
+  const [calculatedCalories, setCalculatedCalories] = useState({
+    tdeeCalories: "",
+    bmrCalories: "",
+  });
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -22,7 +25,8 @@ export function TdeePage() {
   const calculateCalories = () => {
     if (inputValues) {
       console.log("CALCULATED");
-      setTdeeCalories(Math.round(tdeeCalculation(inputValues)));
+      setCalculatedCalories(tdeeCalculation(inputValues));
+      console.log(calculatedCalories.bmrCalories);
     }
   };
 
@@ -113,7 +117,8 @@ export function TdeePage() {
       >
         CALCULATE
       </button>
-      <p>{tdeeCalories}</p>
+      <p>TDEE Calories: {calculatedCalories.tdeeCalories}</p>
+      <p>BMR Calories: {calculatedCalories.bmrCalories}</p>
     </>
   );
 }
