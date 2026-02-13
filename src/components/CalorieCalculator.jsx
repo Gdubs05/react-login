@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { tdeeCalculation } from "../utils/tdeeCalulation";
+import "./CalorieCalculator.css";
 
 export function CalorieCalculator() {
   const [inputValues, setInputValues] = useState({
@@ -109,6 +110,7 @@ export function CalorieCalculator() {
         </tbody>
       </table>
       <button
+        className="button"
         onClick={() => {
           calculateCalories();
         }}

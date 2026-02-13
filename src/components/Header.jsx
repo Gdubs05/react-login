@@ -6,19 +6,18 @@ export function Header() {
     <div className="header">
       <div className="left-section">
         <Link to="/" className="header-link">
-          <img className="logo" src="images/logo-white.png" />
-          <img className="mobile-logo" src="images/mobile-logo-white.png" />
+          <img className="logo" src="/images/FeStrength.png" />
+          <img className="mobile-logo" src="/images/FeStrength.png" />
         </Link>
       </div>
 
       <div className="right-section">
-        <Link className="orders-link header-link" to="/login">
-          <span className="orders-text">Login</span>
+        <Link className="login-link header-link" to="/login">
+          <span className="login-text">Login</span>
         </Link>
 
-        <Link className="cart-link header-link" to="/tdee">
-          <img className="cart-icon" src="images/icons/cart-icon.png" />
-          <div className="cart-text">TDEE</div>
+        <Link className="tdee-link header-link" to="/tdee">
+          <div className="tdee-text">TDEE</div>
         </Link>
       </div>
     </div>

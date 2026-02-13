@@ -1,5 +1,11 @@
 import { Login } from "../components/Login";
+import { Header } from "../components/Header";
 
 export function LoginPage() {
-  return <Login />;
+  return (
+    <>
+      <Header />
+      <Login />
+    </>
+  );
 }
