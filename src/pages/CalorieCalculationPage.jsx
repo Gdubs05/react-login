@@ -1,5 +1,6 @@
 import { Header } from "../components/Header";
 import { CalorieCalculator } from "../components/CalorieCalculator";
+import { WeightLossCalculator } from "../components/WeightLossCalculator";
 import "./calorieCalculationPage.css";
 
 export function CalorieCalculationPage() {
@@ -8,7 +9,7 @@ export function CalorieCalculationPage() {
       <Header />
       <div className="calculationsContainer">
         <CalorieCalculator />
-        <CalorieCalculator />
+        <WeightLossCalculator />
         <CalorieCalculator />
       </div>
     </>

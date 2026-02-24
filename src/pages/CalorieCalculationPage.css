@@ -1,3 +1,7 @@
+body {
+    color: hsl(0, 2%, 90%)
+}
+
 .calculationsContainer{
     display: flex;
     justify-content: space-evenly;

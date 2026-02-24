@@ -35,6 +35,7 @@ export function CalorieCalculator() {
   return (
     <>
       <div className="calorieCalculator">
+        <h3>TDEE</h3>
         <table>
           <tbody>
             <tr className="genderSelector">
