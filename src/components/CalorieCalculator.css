@@ -1,3 +1,22 @@
 .button {
     background-color: rgb(90, 120, 99);
+    text-align: center;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.textbox {
+    width: 75%;
+}
+
+td {
+    text-align: left;
+}
+
+.calorieCalculator {
+    padding: 10px;
+    border-width: 2px;
+    border-radius: 5px;
+    background-color: rgb(145, 145, 145);
+    margin: 15px;
 }

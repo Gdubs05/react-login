@@ -1,11 +1,16 @@
 import { Header } from "../components/Header";
 import { CalorieCalculator } from "../components/CalorieCalculator";
+import "./calorieCalculationPage.css";
 
 export function CalorieCalculationPage() {
   return (
     <>
       <Header />
-      <CalorieCalculator />
+      <div className="calculationsContainer">
+        <CalorieCalculator />
+        <CalorieCalculator />
+        <CalorieCalculator />
+      </div>
     </>
   );
 }
