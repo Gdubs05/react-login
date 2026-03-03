@@ -4,8 +4,8 @@ export function weightLossCalculation(inputValues){
     const time = inputValues.time;
     const tdee = inputValues.tdee;
     
-    const dailyDeficit = (3500*(currentWeight - desiredWeight))/(time*7)
-    const dailyCaloricIntake = tdee -((3500*(currentWeight - desiredWeight))/(time*7));
+    const dailyDeficit = Math.round((3500*(currentWeight - desiredWeight))/(time*7))
+    const dailyCaloricIntake = Math.round(tdee -((3500*(currentWeight - desiredWeight))/(time*7)));
     
     return ({dailyCalories: dailyCaloricIntake, dailyDeficit: dailyDeficit});
 }

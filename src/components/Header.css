@@ -16,7 +16,7 @@
 }
 
 .header .left-section {
-  width: 208px;
+  width: 15%;
 }
 
 @media (max-width: 800px) {
@@ -32,10 +32,6 @@
   cursor: pointer;
   text-decoration: none;
   border: 1px solid rgba(0, 0, 0, 0);
-}
-
-.header .header-link:hover {
-  border: 1px solid white;
 }
 
 .header .logo {
@@ -59,17 +55,9 @@
   }
 }
 
-.header .middle-section {
-  flex: 1;
-  max-width: 850px;
-  margin-left: 10px;
-  margin-right: 10px;
-  display: flex;
-}
-
 .header .right-section {
-  width: 180px;
-  flex-shrink: 0;
+  width: 100px;
+  flex-shrink: 1;
   display: flex;
   justify-content: end;
 }
