@@ -7,6 +7,7 @@ export function CalorieCalculationPage() {
   return (
     <>
       <Header />
+      <img src="../../public/images/food.png" className="background-image" />
       <div className="calculationsContainer">
         <CalorieCalculator />
         <WeightLossCalculator />

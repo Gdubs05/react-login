@@ -6,6 +6,10 @@ export function HomePage() {
   return (
     <>
       <Header />
+      <img
+        className="background-image"
+        src="../../public/images/dumbbells.jpg"
+      ></img>
       <div className="welcome">
         <h1> Welcome to FeStrength </h1>
         <p>"Where Science Meets Strength"</p>

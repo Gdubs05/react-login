@@ -1,0 +1,9 @@
+.background-image{
+    width: 100%;
+}
+
+.welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
