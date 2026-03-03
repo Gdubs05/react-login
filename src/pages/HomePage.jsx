@@ -9,7 +9,6 @@ export function HomePage() {
       <div className="welcome">
         <h1> Welcome to FeStrength </h1>
         <p>"Where Science Meets Strength"</p>
-        <p>Maybe a button for you to click</p>
         <Link to="/login">
           <button className="button">Login</button>
         </Link>

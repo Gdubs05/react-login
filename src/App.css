@@ -6,12 +6,30 @@
 }
 
 body {
-  background-color: #a0a0a0;
+  background-color: #F0EFEB;
   font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
   font-weight: normal;
+  color: black;
 }
 
 .button {
-    background-color: rgb(90, 120, 99);
+    background-color: #283618;
+    text-align: center;
+    width: auto;
+    border-radius: 5px;
+    padding: 7px 0px;
 }
 
+input {
+  background-color: #F0EFEB;
+  color: black;
+}
+
+select {
+  background-color: #F0EFEB;
+  color: black;
+  border-bottom: black;
+  border-right: black;
+  border-width: 2pt;
+  border-color:black;
+}
