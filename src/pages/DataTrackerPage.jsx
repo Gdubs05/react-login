@@ -8,8 +8,9 @@ export function DataTrackerPage() {
 
   const fetchLatestEntry = () => {
     fetch("http://localhost:3001/weights")
-      .then((res) => res.json())
+      .then((res) => res.json()) //converts json http into usable JavaScript
       .then((data) => {
+        //"data" can be called whatever you want, just a var name
         if (data.length > 0) {
           setLatestEntry(data[data.length - 1]); //show last logged entry
         }
