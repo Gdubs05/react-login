@@ -4,34 +4,38 @@ import { useEffect, useState } from "react";
 import { WeightTracker } from "../components/WeightTracker";
 
 export function DataTrackerPage() {
-  const [latestEntry, setLatestEntry] = useState(null);
+  const [entries, setEntries] = useState(null);
 
-  const fetchLatestEntry = () => {
+  const fetchEntries = () => {
     fetch("http://localhost:3001/weights")
       .then((res) => res.json()) //converts json http into usable JavaScript
       .then((data) => {
         //"data" can be called whatever you want, just a var name
         if (data.length > 0) {
-          setLatestEntry(data[data.length - 1]); //show last logged entry
+          setEntries(data);
+        } else {
+          setEntries(null);
         }
       })
       .catch((err) => console.error(err));
   };
 
   useEffect(() => {
-    fetchLatestEntry();
+    fetchEntries();
   }, []);
 
   return (
     <>
       <Header />
       {/* Pass fetchLatestEntry to WeightTracker so it can update after logging */}
-      <WeightTracker refreshLatest={fetchLatestEntry} />
+      <WeightTracker refreshEntries={fetchEntries} />
       <div>
-        {latestEntry ? (
-          <h1>
-            {latestEntry.date}: {latestEntry.weight} lbs, {latestEntry.bodyfat}%
-          </h1>
+        {entries ? (
+          entries.map((entry, index) => (
+            <h1 key={index}>
+              {entry.date}: {entry.weight}lbs, {entry.bodyfat}%
+            </h1>
+          ))
         ) : (
           <h1>No entries yet</h1>
         )}

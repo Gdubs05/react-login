@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function WeightTracker({ refreshLatest }) {
+export function WeightTracker({ refreshEntries }) {
   const [inputValues, setInputValues] = useState({
     weight: "",
     bodyfat: "",
@@ -21,9 +21,21 @@ export function WeightTracker({ refreshLatest }) {
         body: JSON.stringify(inputValues),
       });
       setInputValues({ weight: "", bodyfat: "", date: "" }); //clear form
-      refreshLatest(); //update latest entry in parent
+      refreshEntries(); //update latest entry in parent
     } catch (error) {
       console.error("Error logging weight:", error);
+    }
+  };
+
+  const deleteWeights = async () => {
+    try {
+      await fetch("http://localhost:3001/weights", {
+        method: "DELETE",
+      });
+
+      refreshEntries();
+    } catch (error) {
+      console.error("Error deleting weights:", error);
     }
   };
 
@@ -77,6 +89,9 @@ export function WeightTracker({ refreshLatest }) {
 
         <button className="button" onClick={logWeight}>
           Log Weight
+        </button>
+        <button className="button" onClick={deleteWeights}>
+          Clear Weights
         </button>
       </div>
     </>
