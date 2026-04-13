@@ -17,12 +17,6 @@ app.get("/weights", (req, res) => {
     res.json(loggedWeights);
 })
 
-app.get("/test-delete", (req, res) => {
-  console.log("TEST DELETE HIT");
-  loggedWeights.length = 0;
-  res.send("cleared");
-});
-
 // Receive new weight entry
 app.post("/weights", (req, res) => {
     const newEntry = req.body;          //expects { weight, bodyfat, date }
@@ -35,13 +29,6 @@ app.delete("/weights", (req, res) =>{
     loggedWeights.length = 0;
     res.json({message: "All logged weights cleared"});
 })
-
-app.delete("/weights", (req, res) => {
-  console.log("DELETE HIT");
-  loggedWeights.length = 0;
-  res.json({ message: "cleared" });
-});
-
 
 app.listen(PORT, () => {                    //actually starts the server
     console.log(`Server running on port ${PORT}`);  //runs when the server is started
