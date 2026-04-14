@@ -3,6 +3,7 @@ import "./DataTrackerPage.css";
 import { useEffect, useState } from "react";
 import { WeightTracker } from "../components/WeightTracker";
 import { WeightGraph } from "../components/WeightGraph";
+import { ResponsiveContainer } from "recharts";
 
 export function DataTrackerPage() {
   const [entries, setEntries] = useState([]);
@@ -30,8 +31,10 @@ export function DataTrackerPage() {
     <>
       <Header />
       {/* Pass fetchLatestEntry to WeightTracker so it can update after logging */}
-      <WeightTracker refreshEntries={fetchEntries} />
-      <WeightGraph data={entries} />
+      <div className="container">
+        <WeightTracker refreshEntries={fetchEntries} />
+        <WeightGraph data={entries} />
+      </div>
     </>
   );
 }
