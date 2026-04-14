@@ -32,17 +32,6 @@ export function DataTrackerPage() {
       {/* Pass fetchLatestEntry to WeightTracker so it can update after logging */}
       <WeightTracker refreshEntries={fetchEntries} />
       <WeightGraph data={entries} />
-      <div>
-        {entries ? (
-          entries.map((entry, index) => (
-            <h1 key={index}>
-              {entry.date}: {entry.weight}lbs, {entry.bodyfat}%
-            </h1>
-          ))
-        ) : (
-          <h1>No entries yet</h1>
-        )}
-      </div>
     </>
   );
 }
