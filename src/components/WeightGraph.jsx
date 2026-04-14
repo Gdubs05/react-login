@@ -13,6 +13,7 @@ import {
   Legend,
   Scatter,
   ScatterChart,
+  ResponsiveContainer,
 } from "recharts";
 
 export function WeightGraph({ data }) {
