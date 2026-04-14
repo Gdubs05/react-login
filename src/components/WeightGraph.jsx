@@ -23,7 +23,14 @@ export function WeightGraph({ data }) {
         <CartesianGrid></CartesianGrid>
         <XAxis dataKey="date"></XAxis>
         <YAxis></YAxis>
-        <Tooltip></Tooltip>
+        <Tooltip
+          formatter={(value, name) => {
+            if (name === "weight") {
+              return `${value}lbs`;
+            }
+            return value;
+          }}
+        />
         <Legend></Legend>
         <Line type="monotone" dataKey="weight" stroke="green"></Line>
       </LineChart>
@@ -31,7 +38,14 @@ export function WeightGraph({ data }) {
         <CartesianGrid></CartesianGrid>
         <XAxis dataKey="date"></XAxis>
         <YAxis></YAxis>
-        <Tooltip></Tooltip>
+        <Tooltip
+          formatter={(value, name) => {
+            if (name === "bodyfat") {
+              return `${value}%`;
+            }
+            return value;
+          }}
+        />
         <Legend></Legend>
         <Line type="monotone" dataKey="bodyfat" stroke="red"></Line>
       </LineChart>
