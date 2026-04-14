@@ -1,0 +1,7 @@
+.graph {
+    display:flex, 
+    flexDirection=column, 
+    alignItems=center, 
+    background=beige, 
+    height=2000px
+}

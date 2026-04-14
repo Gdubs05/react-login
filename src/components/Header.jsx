@@ -19,6 +19,10 @@ export function Header() {
         <Link className="tdee-link header-link" to="/tdee">
           <div className="tdee-text">TDEE</div>
         </Link>
+
+        <Link className="dataTracker-link header-link" to="/data">
+          <div className="dataTracker-text">Log Weight</div>
+        </Link>
       </div>
     </div>
   );
