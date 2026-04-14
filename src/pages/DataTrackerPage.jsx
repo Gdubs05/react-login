@@ -13,9 +13,11 @@ export function DataTrackerPage() {
       .then((res) => res.json()) //converts json http into usable JavaScript
       .then((data) => {
         //"data" can be called whatever you want, just a var name
-
         if (data.length > 0) {
-          setEntries(data);
+          const sorted = [...data].sort(
+            (a, b) => new Date(a.date) - new Date(b.date),
+          );
+          setEntries(sorted);
         } else {
           setEntries([]);
         }
