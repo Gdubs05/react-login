@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import weightRoutes from "./routes/weights";
+import weightRoutes from "./routes/weights.js";
 
 const app = express();   //the server object itself
 const PORT = 3001;       //define the port your server listens on

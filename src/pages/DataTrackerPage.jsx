@@ -3,7 +3,6 @@ import "./DataTrackerPage.css";
 import { useEffect, useState } from "react";
 import { WeightTracker } from "../components/WeightTracker";
 import { WeightGraph } from "../components/WeightGraph";
-import { ResponsiveContainer } from "recharts";
 
 export function DataTrackerPage() {
   const [entries, setEntries] = useState([]);
